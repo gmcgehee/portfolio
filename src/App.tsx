@@ -1,35 +1,55 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import ProjectCard from './components/card'
 import './App.css'
+import './index.css';
+import getCards from './scripts/get_cards'
 
-function App() {
+export default function App() {
   const [count, setCount] = useState(0)
-
+  // const repos = getCards("gmcgehee"); // comment out when not in use, rate-limited to 60 req/hour
+  console.log("bonjour"); // say hello, no I wrote this myself BRADLEY
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="flex flex-rows items-center text-center min-h-screen p-8">
+      {/* Page Title */}
+
+      <h1 className="flex justify-center text-center items-center text-4xl font-bold m-auto w-1/2">Portfolio
+      </h1>
+      <div id="right" className='w-1/2'>
+        <div id="cards" className="flex flex-col">
+
+          <div className="flex flex-rows justify-center">
+            <ProjectCard title="DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.SdvR47ktRyvY0JgWjX1xbwHaFK%3Fr%3D0%26pid%3DApi&f=1&ipt=fba169ca1bab4151093cda0061a3ec469bf7cc3e9ff2de9d5708372b2a4e0e4a&ipo=images">
+            </ProjectCard>
+            <ProjectCard title="Triple DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.SdvR47ktRyvY0JgWjX1xbwHaFK%3Fr%3D0%26pid%3DApi&f=1&ipt=fba169ca1bab4151093cda0061a3ec469bf7cc3e9ff2de9d5708372b2a4e0e4a&ipo=images">
+            </ProjectCard>
+            <ProjectCard title="Triple DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.SdvR47ktRyvY0JgWjX1xbwHaFK%3Fr%3D0%26pid%3DApi&f=1&ipt=fba169ca1bab4151093cda0061a3ec469bf7cc3e9ff2de9d5708372b2a4e0e4a&ipo=images">
+            </ProjectCard>
+
+          </div>
+
+          <div className='flex flex-rows justify-center'>
+            <ProjectCard title="Triple DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.SdvR47ktRyvY0JgWjX1xbwHaFK%3Fr%3D0%26pid%3DApi&f=1&ipt=fba169ca1bab4151093cda0061a3ec469bf7cc3e9ff2de9d5708372b2a4e0e4a&ipo=images">
+            </ProjectCard>
+            <ProjectCard title="Triple DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.SdvR47ktRyvY0JgWjX1xbwHaFK%3Fr%3D0%26pid%3DApi&f=1&ipt=fba169ca1bab4151093cda0061a3ec469bf7cc3e9ff2de9d5708372b2a4e0e4a&ipo=images">
+            </ProjectCard>
+            <ProjectCard title="Triple DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.SdvR47ktRyvY0JgWjX1xbwHaFK%3Fr%3D0%26pid%3DApi&f=1&ipt=fba169ca1bab4151093cda0061a3ec469bf7cc3e9ff2de9d5708372b2a4e0e4a&ipo=images">
+            </ProjectCard>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      {/* Image Row 
+      <div className="grid grid-cols-3 gap-6">
+        <img
+          src="https://via.placeholder.com/300"
+          alt="Project 1"
+          className="rounded shadow"
+        />
+        </div>
+        */}
+
+    </div>
+
   )
 }
-
-export default App
