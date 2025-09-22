@@ -11,32 +11,29 @@ export default function App() {
   // const repos = getCards("gmcgehee"); // comment out when not in use, rate-limited to 60 req/hour
   console.log("bonjour"); // say hello, no I wrote this myself BRADLEY
   return (
-    <div className="flex flex-rows items-center text-center min-h-screen p-8">
+    <div id="fullScreen" className="flex flex-rows items-center text-center min-h-screen">
       {/* Page Title */}
-
-      <h1 className="flex justify-center text-center items-center text-4xl font-bold m-auto w-1/2">Portfolio
+    <div id="left" className="w-1/2 max-h-screen">
+      <h1 className="flex items-center text-center">Portfolio
       </h1>
-      <div id="right" className='w-1/2'>
-        <div id="cards" className="flex flex-col">
 
-          <div className="flex flex-rows justify-center">
-            <ProjectCard title="DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.SdvR47ktRyvY0JgWjX1xbwHaFK%3Fr%3D0%26pid%3DApi&f=1&ipt=fba169ca1bab4151093cda0061a3ec469bf7cc3e9ff2de9d5708372b2a4e0e4a&ipo=images">
+      </div>
+      <div id="right" className='w-1/2 max-h-screen overflow-y-auto'>
+        <div id="cards" className="flex flex-col items-center text-center">
+
+            <ProjectCard title="DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://www.kaspersky.com/content/en-global/images/repository/isc/2021/encryption-1.jpg">
             </ProjectCard>
-            <ProjectCard title="Triple DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.SdvR47ktRyvY0JgWjX1xbwHaFK%3Fr%3D0%26pid%3DApi&f=1&ipt=fba169ca1bab4151093cda0061a3ec469bf7cc3e9ff2de9d5708372b2a4e0e4a&ipo=images">
+            <ProjectCard title="Triple DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://www.kaspersky.com/content/en-global/images/repository/isc/2021/encryption-1.jpg">
             </ProjectCard>
-            <ProjectCard title="Triple DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.SdvR47ktRyvY0JgWjX1xbwHaFK%3Fr%3D0%26pid%3DApi&f=1&ipt=fba169ca1bab4151093cda0061a3ec469bf7cc3e9ff2de9d5708372b2a4e0e4a&ipo=images">
+            <ProjectCard title="Triple DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://www.kaspersky.com/content/en-global/images/repository/isc/2021/encryption-1.jpg">
             </ProjectCard>
 
-          </div>
-
-          <div className='flex flex-rows justify-center'>
-            <ProjectCard title="Triple DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.SdvR47ktRyvY0JgWjX1xbwHaFK%3Fr%3D0%26pid%3DApi&f=1&ipt=fba169ca1bab4151093cda0061a3ec469bf7cc3e9ff2de9d5708372b2a4e0e4a&ipo=images">
+            <ProjectCard title="Triple DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://www.kaspersky.com/content/en-global/images/repository/isc/2021/encryption-1.jpg">
             </ProjectCard>
-            <ProjectCard title="Triple DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.SdvR47ktRyvY0JgWjX1xbwHaFK%3Fr%3D0%26pid%3DApi&f=1&ipt=fba169ca1bab4151093cda0061a3ec469bf7cc3e9ff2de9d5708372b2a4e0e4a&ipo=images">
+            <ProjectCard title="Triple DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://www.kaspersky.com/content/en-global/images/repository/isc/2021/encryption-1.jpg">
             </ProjectCard>
-            <ProjectCard title="Triple DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.SdvR47ktRyvY0JgWjX1xbwHaFK%3Fr%3D0%26pid%3DApi&f=1&ipt=fba169ca1bab4151093cda0061a3ec469bf7cc3e9ff2de9d5708372b2a4e0e4a&ipo=images">
+            <ProjectCard title="Triple DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://www.kaspersky.com/content/en-global/images/repository/isc/2021/encryption-1.jpg">
             </ProjectCard>
-          </div>
         </div>
       </div>
       {/* Image Row 
