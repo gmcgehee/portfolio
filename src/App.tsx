@@ -16,7 +16,7 @@ import getCards from './scripts/getCards'
 
 export default function App() {
   const [count, setCount] = useState(0)
-  // const repos = getCards("gmcgehee"); // comment out when not in use, rate-limited to 60 req/hour
+  const repos = getCards("gmcgehee"); // comment out when not in use, rate-limited to 60 req/hour
   console.log("bonjour"); // say hello, no I wrote this myself BRADLEY
   return (
     <div id="fullScreen" className="flex flex-rows min-h-screen">
