@@ -1,10 +1,8 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import ProjectCard from './components/card'
-import './App.css'
+import { useState } from 'react';
+import ProjectCard from './components/card';
+import './App.css';
 import './index.css';
-import getCards from './scripts/getCards'
+import getCards from './scripts/getCards';
 
 /*
 
@@ -15,23 +13,27 @@ import getCards from './scripts/getCards'
 */
 
 export default function App() {
-  const [count, setCount] = useState(0)
-  const repos = getCards("gmcgehee"); // comment out when not in use, rate-limited to 60 req/hour
-  console.log("bonjour"); // say hello, no I wrote this myself BRADLEY
+  //const [count, setCount] = useState(0)
+  //const repos = //getCards("gmcgehee"); // comment out when not in use, rate-limited to 60 req/hour
   return (
-    <div id="fullScreen" className="flex flex-rows min-h-screen">
+    <div id="full-screen" className="flex flex-style-rows w-[100vw] h-[100vh]">
       {/* Page Title */}
-    <div id="left" className="flex items-center text-center m-auto w-1/2 max-h-screen">
-      <h1 className="flex items-center text-center m-auto">Portfolio
-      </h1>
+    <div id="left" className="border w-[50%]">
+      <h1>Portfolio</h1>
 
       </div>
-      <div id="right" className='w-1/2 max-h-screen overflow-y-auto'>
-        <div id="cards" className="flex flex-col items-center text-center m-auto">
+      {/* max-h-screen overflow-y-auto */}
+      <div id="right" className='border w-[50%] h-[100%]'>
+        <div id="cards" className="grid grid-col gap-[30vh] h-[100%] justify-center pt-[20%] pb-[20%] overflow-auto">
           
             <ProjectCard title="DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://www.kaspersky.com/content/en-global/images/repository/isc/2021/encryption-1.jpg">
             </ProjectCard>
-          
+             <ProjectCard title="DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://www.kaspersky.com/content/en-global/images/repository/isc/2021/encryption-1.jpg">
+            </ProjectCard>
+             <ProjectCard title="DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://www.kaspersky.com/content/en-global/images/repository/isc/2021/encryption-1.jpg">
+            </ProjectCard>
+            <ProjectCard title="DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://www.kaspersky.com/content/en-global/images/repository/isc/2021/encryption-1.jpg">
+            </ProjectCard>
           
         </div>
       </div>
