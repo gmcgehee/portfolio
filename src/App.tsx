@@ -4,16 +4,9 @@ import './App.css';
 import './index.css';
 import getCards from './scripts/getCards';
 
-/*
-
-- Add scroll functionality to right side
-- for loop method that generates all the cards
-
-
-*/
 
 export default function App() {
-  //const [count, setCount] = useState(0)
+  const [lifeSection, setLifeSection] = useState(0) // we want three sections: projects, professional experience, 
   //const repos = //getCards("gmcgehee"); // comment out when not in use, rate-limited to 60 req/hour
   return (
     <div id="full-screen" className="flex flex-style-rows w-[100vw] h-[100vh]">
@@ -28,12 +21,7 @@ export default function App() {
           
             <ProjectCard title="DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://www.kaspersky.com/content/en-global/images/repository/isc/2021/encryption-1.jpg">
             </ProjectCard>
-             <ProjectCard title="DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://www.kaspersky.com/content/en-global/images/repository/isc/2021/encryption-1.jpg">
-            </ProjectCard>
-             <ProjectCard title="DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://www.kaspersky.com/content/en-global/images/repository/isc/2021/encryption-1.jpg">
-            </ProjectCard>
-            <ProjectCard title="DES Encryption" description="Low-level implementation of Triple DES including block cipher modes ECB, CBC, and OFB." imageUrl="https://www.kaspersky.com/content/en-global/images/repository/isc/2021/encryption-1.jpg">
-            </ProjectCard>
+             {/* etc. */}
           
         </div>
       </div>
