@@ -7,7 +7,7 @@ export interface cardParts {
 
 function ProjectCard(title: string, description: string, language: string, imageUrl: string, id: string) {
     return (
-        <div className="border p-[2vh] w-[35vw] h-[60vh] rounded-s" key={id}>
+        <div className="border w-[60%]" key={id}>
             <p>{title}</p>  {/* Fix the auto-sizing on this; it should look good no matter the viewport */}
             <p className="">{description}</p>
             <p>{language}</p>
