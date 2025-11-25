@@ -43,12 +43,13 @@ export default function App() {
   return (
     <div id="full-screen" className="flex flex-style-rows w-[100vw] h-[100vh]">
       {/* Page Title */}
-      <div id="left" className="border w-[50%]">
-        <h1>Portfolio</h1>
+      <div id="left" className="drop-shadow-lg/30 w-[50%] bg-[#C0D684] box-border p-[5%] text-right align-center content-center">
+        <h1 className='text-[2em]'>Portfolio</h1>
+        <h2 className='text-[1em]'>A summary of my projects, passions, and professional experience</h2>
 
       </div>
-      <div id="right" className='border w-[50%] h-[100%]'>
-        <div id="cards" className="grid grid-col gap-[30vh] h-[100%] justify-center pt-[20%] pb-[20%] overflow-auto">
+      <div id="right" className='w-[50%] h-[100%] bg-[#CBEAA6] box-border'>
+        <div id="cards" className="flex flex-col gap-[60%] h-[100%] pt-[20%] pb-[20%] overflow-scroll align-center">
 
           {cards}
 
