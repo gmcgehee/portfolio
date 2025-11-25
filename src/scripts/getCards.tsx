@@ -1,11 +1,19 @@
-import React, { useEffect } from "react";
 import ProjectCard from "../components/card";
+
+// This is a list of dictionaries object
+export type repoList = Array<{
+    [repoIndex: number]: {
+        [key: string]: string | number
+    }
+}>
 
 export async function getRepos(username: string) {
     // the goal for this function is that it pings my github and turns all my repos into cards
 
+    // return;
+
     const githubRepoLink: string = `https://api.github.com/users/${username}/repos`;
-    let repos: [{ [key: string]: any }] = [{}]; // declaring outside to provide continual access
+    let repos: repoList = []; // declaring outside to provide continual access
 
     try {
         repos = await fetch(githubRepoLink)
@@ -17,7 +25,7 @@ export async function getRepos(username: string) {
                     return response.json();
                 }
             })
-            .catch(err => console.log("Repo data was not successfully fetched."));
+            .catch(() => console.log("Repo data was not successfully fetched."));
 
         console.log(repos);
     } catch (err) {
@@ -28,11 +36,9 @@ export async function getRepos(username: string) {
 
 }
 
+// I feel that a better way to do this would be by passing the list of repos into getCards and just store the repos instead of storing the cards
+export default function getCards(repos: repoList) {
 
-export default async function getCards(username: string) {
-
-    
-    const repos = await getRepos(username);
     let listOfCards: any = [];
 
     repos.forEach((repo: { [key: string]: any }) => { // typescript typing is just insane brother
@@ -48,7 +54,7 @@ export default async function getCards(username: string) {
 
 
 
-    return await listOfCards;
+    return listOfCards;
 
 
 }

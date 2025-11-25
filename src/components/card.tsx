@@ -1,5 +1,3 @@
-import React from "react";
-
 export interface cardParts { 
     title: string;
     description: string;
