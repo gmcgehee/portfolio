@@ -45,7 +45,7 @@ export default function App() {
   return (
     
     // <div id="full-screen" className="grid grid-row col-span-full grid-flow grid-cols-2 w-[100vw] h-[100vh] gap-0">
-    <div id="full-screen" className="flex flex-row w-[100vw] h-[100vh]">
+    <div id="full-screen" className="flex flex-row min-w-[100vw] min-h-[100vh]">
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet"/>
