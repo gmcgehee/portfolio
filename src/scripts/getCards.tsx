@@ -42,10 +42,11 @@ export default function getCards(repos: repoList) {
         const title = repo["name"]
         const description = repo["description"]
         const language = repo["language"]
-        const imageUrl = "https://scontent.cdninstagram.com/v/t51.82787-15/567178776_18004274396819480_2607484807321244472_n.jpg?stp=dst-jpg_e35_p1080x1080_tt6&_nc_cat=104&ig_cache_key=Mzc1MjY1MjYyODQ5Nzk0MTAxOA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEzNDl4MTY4NS5zZHIuQzMifQ%3D%3D&_nc_ohc=lRziJ4HldfMQ7kNvwGVToq3&_nc_oc=AdmX9htk6xZgRXOy32H3lekgd-8zdCeOANWAq4cte9pzWEFfu7lzlnLlYvaJVveYgHA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=j6v8MEsTLLHIhexnNvVKiw&oh=00_AfiesKS2amKpL5xDjSqYqPpRpb7LmbgG4TJMv_Ov_ssJFw&oe=692C09A2" // TODO: Look at the readme for the repo and find the image logo there. I also need to add logos to each thing.
+        const imageUrl = `https://github.com/${repo['full_name']}/blob/main/images/logo.jpg?raw=true` // This relies on a very specific file structure. It would be good to have a fallback image just in case this isn't how it's structured
         const id = repo['id']
-
-        const card = ProjectCard(title, description, language, imageUrl, id)
+        const url = repo['svn_url']
+        
+        const card = ProjectCard(title, description, language, imageUrl, id, url)
         listOfCards.push(card)
     });
 

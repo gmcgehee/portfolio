@@ -40,16 +40,22 @@ export default function App() {
 
   }, [])
 
+
   return (
-    <div id="full-screen" className="flex flex-style-rows w-[100vw] h-[100vh]">
+    
+    // <div id="full-screen" className="grid grid-row col-span-full grid-flow grid-cols-2 w-[100vw] h-[100vh] gap-0">
+    <div id="full-screen" className="flex flex-row w-[100vw] h-[100vh]">
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet"/>
       {/* Page Title */}
-      <div id="left" className="drop-shadow-lg/30 w-[50%] bg-[#463F3A] box-border p-[5%] text-right align-center content-center">
-        <h1 className='text-[2em]'>Portfolio</h1>
-        <h2 className='text-[1em]'>A summary of my projects, passions, and professional experience</h2>
+      <div id="left" className="drop-shadow-lg/30 bg-(--left-bg) h-[100vh] box-border p-[5%] text-right text-(--left-text) align-center content-center font-serif">
+        <h1 className='text-[2em] font-bold'>Geist McGehee</h1>
+        <h2 className='text-[1em]'>Projects, passions, and professional experience</h2>
 
       </div>
-      <div id="right" className='w-[50%] h-[100%] bg-[#8A817C] box-border'>
-        <div id="cards" className="flex flex-col gap-[60%] h-[100%] pt-[20%] pb-[20%] overflow-scroll align-center">
+      <div id="right" className='h-[100%] bg-(--right-bg) box-border font-mono'>
+        <div id="cards" className="grid grid-col gap-[60%] h-[100%] pt-[20%] pb-[20%] overflow-scroll align-center">
 
           {cards}
 
