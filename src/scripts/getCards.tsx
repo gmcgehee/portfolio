@@ -40,6 +40,9 @@ export default function getCards(repos: repoList) {
 
     repos.forEach((repo: { [key: string]: any }) => { // typescript typing is just insane brother
         const title = repo["name"]
+        if (title === "portfolio") {
+            return; // this skips the portfolio only
+        }
         const description = repo["description"]
         const language = repo["language"]
         const imageUrl = `https://github.com/${repo['full_name']}/blob/main/images/logo.jpg?raw=true` // This relies on a very specific file structure. It would be good to have a fallback image just in case this isn't how it's structured
