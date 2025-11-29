@@ -50,12 +50,12 @@ export default function App() {
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet"/>
       {/* Page Title */}
-      <div id="left" className="drop-shadow-lg/30 bg-(--left-bg) h-[100vh] box-border p-[5%] w-[50%] text-right text-(--left-text) align-center content-center font-serif">
-        <h1 className='text-[2em] font-bold'>Geist McGehee</h1>
-        <h2 className='text-[1em]'>Projects, passions, and professional experience</h2>
+      <div id="left" className="drop-shadow-lg/30 bg-(--left-bg) h-[100vh] box-border p-[5%] w-[30%] text-right text-(--left-text) align-center content-center font-serif">
+        <h1 className='text-[4em] font-bold'>Geist McGehee</h1>
+        <h2 className='text-[2em]'>Projects, passions, and professional experience</h2>
 
       </div>
-      <div id="right" className='h-[100%] bg-(--right-bg) box-border font-mono w-[50%]'>
+      <div id="right" className='h-[100%] bg-(--right-bg) box-border font-mono w-[70%]'>
         <div id="cards" className="grid grid-col gap-[60%] h-[100%] pt-[20%] pb-[20%] overflow-scroll align-center">
 
           {cards}
