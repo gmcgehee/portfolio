@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import './index.css';
 import getCards from './scripts/getCards';
-import { getRepos } from './scripts/getCards';
 import { type repoList } from './scripts/getCards';
 import { templateRepoList } from './components/templateRepoList';
 
@@ -30,7 +29,9 @@ export default function App() {
 
       if (currRepos !== null) {
         setRepos(currRepos)
+        repos; // quiet the error
       }
+
       setCards(cards); // uses the data I have and puts it to my global value, thanks!
 
 
