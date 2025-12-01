@@ -45,17 +45,17 @@ export default function App() {
   return (
     
     // <div id="full-screen" className="grid grid-row col-span-full grid-flow grid-cols-2 w-[100vw] h-[100vh] gap-0">
-    <div id="full-screen" className="flex flex-row min-w-[100vw] min-h-[100vh]">
+    <div id="full-screen" className="flex flex-row min-w-[100vw] min-h-[100vh] max-h-[100vh] overflow-clip">
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet"/>
       {/* Page Title */}
-      <div id="left" className="drop-shadow-lg/30 bg-(--left-bg) h-[100vh] box-border p-[5%] w-[30%] text-right text-(--left-text) align-center content-center font-serif">
+      <div id="left" className="overflow-clip drop-shadow-lg/30 bg-(--left-bg) max-h-[100vh] box-border p-[5%] w-[35%] text-right text-(--left-text) align-center content-center font-serif">
         <h1 className='text-[4em] font-bold'>Geist McGehee</h1>
         <h2 className='text-[2em]'>Projects, passions, and professional experience</h2>
 
       </div>
-      <div id="right" className='h-[100%] bg-(--right-bg) box-border font-mono w-[70%]'>
+      <div id="right" className='h-[100%] bg-(--right-bg) box-border font-mono w-[65%]'>
         <div id="cards" className="grid grid-col gap-[60%] h-[100%] pt-[20%] pb-[20%] overflow-scroll align-center">
 
           {cards}
